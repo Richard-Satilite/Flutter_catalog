@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/ui/home_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(CatalogApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class CatalogApp extends StatelessWidget {
+  const CatalogApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      title: "Catalog",
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
+        colorSchemeSeed: Colors.deepPurple,
       ),
+      routes: {
+        "home": (context) => HomeScreen(),
+      },
+      initialRoute: "home",
     );
   }
 }
