@@ -13,7 +13,7 @@ class _DashboardState extends State<Dashboard> {
   int _currentIndex = 0;
   final List<Widget> _screens = <Widget>[SearchMovies(), Releases()];
 
-  void UpdateIndex(int index) {
+  void updateIndex(int index) {
     setState(() {
       _currentIndex = index;
     });
@@ -25,7 +25,7 @@ class _DashboardState extends State<Dashboard> {
       body: _screens.elementAt(_currentIndex),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
-          onTap: (value) => UpdateIndex(value),
+          onTap: (value) => updateIndex(value),
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Filmes"),
             BottomNavigationBarItem(
