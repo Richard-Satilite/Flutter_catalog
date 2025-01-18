@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/ui/components/buttons.dart';
 import 'package:flutter_catalog/ui/style/colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,7 +9,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
+        child: Ink(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: <Color>[
+              Color(0xFF000000),
+              Color(0xFF1D0E44),
+            ], begin: Alignment.topCenter),
+          ),
           padding: EdgeInsets.only(top: 64, right: 32, left: 32, bottom: 32),
           child: Column(
             children: <Widget>[
@@ -58,23 +65,20 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Text(
-                  "O lugar para ideal para busca, salva e organizar seus filmes favoritos!"),
-              InkWell(
-                onTap: () {},
-                child: Ink(
-                  decoration: BoxDecoration(
-                    color: AppColor.homeInk,
-                    borderRadius: BorderRadius.circular(50),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 20,
+                ),
+                child: Text(
+                  "O lugar para ideal para buscar, salvar e organizar seus filmes favoritos!",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
                   ),
-                  child: Row(
-                    children: <Widget>[
-                      Text("Quero Começar!"),
-                      Icon(Icons.arrow_forward),
-                    ],
-                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
+              PrimaryButton(),
             ],
           ),
         ),
