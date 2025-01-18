@@ -60,6 +60,21 @@ class HomeScreen extends StatelessWidget {
               ),
               Text(
                   "O lugar para ideal para busca, salva e organizar seus filmes favoritos!"),
+              InkWell(
+                onTap: () {},
+                child: Ink(
+                  decoration: BoxDecoration(
+                    color: AppColor.homeInk,
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      Text("Quero Começar!"),
+                      Icon(Icons.arrow_forward),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
