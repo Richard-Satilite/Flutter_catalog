@@ -26,6 +26,9 @@ class PrimaryButton extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(
+              width: 16,
+            ),
             Icon(
               Icons.arrow_forward,
               color: Color(0xFF1D0E44),
