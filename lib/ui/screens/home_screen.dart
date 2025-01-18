@@ -82,7 +82,7 @@ class HomeScreen extends StatelessWidget {
               PrimaryButton(
                 text: "Quero Começar!",
                 icon: Icons.arrow_forward,
-                onTap: () => Navigator.pushNamed(context, SearchViewRoute),
+                onTap: () => Navigator.pushNamed(context, DashBoardViewRoute),
               ),
             ],
           ),
