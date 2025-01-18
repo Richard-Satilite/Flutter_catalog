@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/routing_constants.dart';
 import 'package:flutter_catalog/ui/components/buttons.dart';
 import 'package:flutter_catalog/ui/style/colors.dart';
 
@@ -78,7 +79,11 @@ class HomeScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              PrimaryButton(),
+              PrimaryButton(
+                text: "Quero Começar!",
+                icon: Icons.arrow_forward,
+                onTap: () => Navigator.pushNamed(context, SearchViewRoute),
+              ),
             ],
           ),
         ),

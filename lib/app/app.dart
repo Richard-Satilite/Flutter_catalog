@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../ui/screens/home_screen.dart';
+import 'package:flutter_catalog/routing_constants.dart';
+import '../router.dart' as router;
 
 class CatalogApp extends StatelessWidget {
   const CatalogApp({super.key});
@@ -14,10 +14,8 @@ class CatalogApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.deepPurple,
       ),
-      routes: {
-        "home": (context) => HomeScreen(),
-      },
-      initialRoute: "home",
+      onGenerateRoute: router.generateRoute,
+      initialRoute: HomeViewRouter,
     );
   }
 }
